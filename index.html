@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="calc">
+        <div class="barra">
+          
+        </div>
+        
+        <div class="tela" id="tela">
+            0
+        </div>
+        <div class="botoes">
+            <div class="fileira" >
+                <button class="botao dark" onclick="porCem()">%</button>
+                <button class="botao dark" onclick="CE()">CE</button>
+                <button class="botao dark" onclick="limpaTela()" id="c">C</button>
+                <button class="botao dark" onclick="deleta1()" style="font-size: 1.5em;">⌫</button>
+            </div>
+            <div class="fileira">
+                <button class="botao dark" onclick="divideX()">1/x</button>
+                <button class="botao dark" onclick="aoQuad()">x<sup>2</sup></button>
+                <button class="botao dark" onclick="raiz()"><sup>2</sup>√x</button>
+                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(4)" id="div">÷</button>
+            </div>
+            <div class="fileira">
+                <button class="botao light" onclick="escreveNum(7)" >7</button>
+                <button class="botao light" onclick="escreveNum(8)">8</button>
+                <button class="botao light" onclick="escreveNum(9)">9</button>
+                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(3)" id="multi">×</button>
+            </div>
+            <div class="fileira">
+                <button class="botao light" onclick="escreveNum(4)">4</button>
+                <button class="botao light" onclick="escreveNum(5)">5</button>
+                <button class="botao light" onclick="escreveNum(6)">6</button>
+                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(2)" id="sub">-</button>
+            </div>
+            <div class="fileira" >
+                <button class="botao light" onclick="escreveNum(1)">1</button>
+                <button class="botao light" onclick="escreveNum(2)">2</button>
+                <button class="botao light" onclick="escreveNum(3)">3</button>
+                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(1)" id="soma">+</button>
+            </div>
+            <div class="fileira" >
+                <button class="botao light" onclick="inverteSinal()">+/-</button>
+                <button class="botao light" onclick="escreveNum(0)">0</button>
+                <button class="botao light" onclick="ponto()">.</button>
+                <button class="botao purple" onclick="igual()">=</button>
+        </div>
+    </div>
+
+</body>
+</html>
