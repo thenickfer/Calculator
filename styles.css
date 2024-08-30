@@ -5,27 +5,47 @@ body {
     color: #F1f1E2;
 }
 
+.linha {
+    height: 1px;
+    width: 38px;
+    margin: 8px;
+    background-color: #f1f1f1;
+    border: 0.5px solid #f1f1f1;
+    border-radius: 14%;
+}
+
+.menu{
+    cursor: pointer;
+    width: 56px;
+    height: 37px;
+    margin-left: 2%;
+    margin-top: -4%;
+    padding: 5px;
+    border-radius: 5%;
+}
+.menu:hover{
+    background-color: #3b3b3b;
+}
 .calc {
+    
     background-color: #202020;
     width: 520px;
-    height: 670px;
+    height: fit-content;
     border-radius: 10px;
-    margin: 0px auto;
+    margin: auto auto 5rem ;
     padding: 30px 2px;
-    padding-bottom: 15px;
     
 }
 
-.barra {
-    
-    width: 100%;
-    height: 30px;  
-}
+
 
 .numeros {
     color: #a4a4a4;
     text-align: right;
     margin-bottom: -25px;
+    margin-right: 10%;
+    margin-left: 10%;
+    overflow-x: unset;
 }
 
 
@@ -37,7 +57,7 @@ body {
     height: 100px;
     border-radius: 10px;
     margin: auto;
-    margin-top: 14%;
+    margin-top: 5%;
     text-align: right;
     font-size: 5em;
     
@@ -47,6 +67,7 @@ body {
 .botoes {
     height: 520px;
     margin-top: 7.5%;
+    margin-bottom: -100px;
     
 }
 

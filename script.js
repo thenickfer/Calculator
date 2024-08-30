@@ -46,7 +46,11 @@ function preparaOp(escolha){
             oppp = "÷";
             break;
     }
-    document.getElementById("numeros").innerHTML += (tempNum + " "+oppp+" ");
+    if(document.getElementById("numeros").innerHTML==0){
+        document.getElementById("numeros").innerHTML = (tempNum + " "+oppp+" ");
+    } else {
+        document.getElementById("numeros").innerHTML += (tempNum + " "+oppp+" ");
+    }
 
 
 
