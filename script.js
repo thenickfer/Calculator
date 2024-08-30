@@ -3,6 +3,7 @@ let escolha; //por enquanto 1soma;2subtrai;3multiplica;4divide
 let list = new Array(4);
 
 
+
 class Num{
     constructor(numero, operacao){
         this.num=numero;
@@ -29,7 +30,24 @@ function preparaOp(escolha){
     var tempNum = parseFloat(document.getElementById("tela").innerHTML);
     list[index] = new Num(tempNum, escolha);
     index++;
+    var oppp = "";
     document.getElementById("tela").innerHTML = 0;
+    switch(escolha) {
+        case 1:
+            oppp = "+";
+            break;
+        case 2:
+            oppp = "-";
+            break;
+        case 3:
+            oppp = "×";
+            break;
+        case 4:
+            oppp = "÷";
+            break;
+    }
+    document.getElementById("numeros").innerHTML += (tempNum + " "+oppp+" ");
+
 
 
 }
@@ -38,6 +56,7 @@ let mostraResult = false;
 let ultimoNumero;
 let ultimaOp;
 function igual(){
+    document.getElementById("numeros").innerHTML = 0;
     let total = 0;
     var aux = document.getElementById("tela").innerHTML
     list[index] = new Num(aux , 0);
@@ -140,7 +159,7 @@ function CE(){
     document.getElementById("tela").innerHTML = 0;
     mostraResult=false;
     list = new Array(4);
-
+    document.getElementById("numeros").innerHTML = 0;
 
 }
 
