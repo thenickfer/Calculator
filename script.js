@@ -135,8 +135,10 @@ function igual(){
 }
 
 
-
-
+function popup(){
+    var pop = document.getElementById("popup");
+    pop.classList.toggle("show");
+}
 
 
 

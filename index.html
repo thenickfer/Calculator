@@ -8,9 +8,13 @@
     <script src="script.js"></script>
 </head>
 <body>
+    
     <div class="calc">
-
-        <div class="menu">
+        
+        <div class="popup" id="popup">
+            <input type="button" id="seleciona-calc"><label for="seleciona-calc" class="slaoq">Calculadora Científica</label>
+        </div>
+        <div class="menu" onclick="popup()">
            <div class="linha"> </div>
            <div class="linha"> </div>
            <div class="linha"> </div>
@@ -60,6 +64,10 @@
                 <button class="botao light" onclick="ponto()">.</button>
                 <button class="botao purple" onclick="igual()">=</button>
         </div>
+    </div>
+
+    <div class="cover">
+        
     </div>
 
 </body>

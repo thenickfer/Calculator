@@ -72,6 +72,51 @@ body {
     
 }
 
+.popup {
+    visibility: hidden;
+    width: 25em;
+    height: 41.5em;
+    background-color: #3b3b3bbc;
+    position: absolute;
+    margin-top: -30px;
+    border-radius: 2%;
+    
+}
+
+.popup.show {
+    visibility: visible;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+@keyframes slide {
+    from {margin-left: -500px ;opacity: 0;}
+    to {margin-left: 0;opacity: 1;}
+}
+
+#seleciona-calc {
+    margin-top: 60px;
+    margin-left: -2px;
+    height: 50px;
+    width: 25.1rem;
+    border-radius: 0;
+    border: hidden;
+    background-color: #595959;
+}
+
+.slaoq {
+    display: block;
+}
+
+.cover {
+    background-color: #F1f1E2;
+    width: 500px;   
+    height: 1000px;
+    z-index: 10;
+    position: absolute;
+    margin-left: -503px;
+    margin-top: -700px;
+}
 
 .fileira {
     display: flex;
