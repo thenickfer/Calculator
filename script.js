@@ -142,6 +142,10 @@ function popup(){
 
 
 
+function muda(){
+    window.location.href = "doc.html";
+}
+
 
 function escreveNum(num){
     var ini = document.getElementById("tela").innerHTML;

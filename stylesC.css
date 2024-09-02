@@ -1,0 +1,14 @@
+body {
+    background-color: #232A45;
+}
+
+.calc {
+    
+    background-color: #ffffff;
+    width: 700px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: auto auto 5rem ;
+    padding: 30px 2px;
+    
+}

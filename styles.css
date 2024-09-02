@@ -97,15 +97,25 @@ body {
 #seleciona-calc {
     margin-top: 60px;
     margin-left: -2px;
-    height: 50px;
-    width: 25.1rem;
+    height: 40px;
+    width: 377px;
     border-radius: 0;
     border: hidden;
-    background-color: #595959;
+    background-color: #595959d0;
+    padding-left: 25px;
+    padding-top: 20px;
+
 }
 
-.slaoq {
-    display: block;
+
+#seleciona-calc:hover{
+    background-color: #595959;
+    cursor: pointer;
+}
+
+.popup .menu{
+    margin-top: 9px;
+    margin-left: 9.5px;
 }
 
 .cover {
