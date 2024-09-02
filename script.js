@@ -170,6 +170,7 @@ function CE(){
     mostraResult=false;
     list = new Array(4);
     document.getElementById("numeros").innerHTML = 0;
+    index = 0;
 
 }
 
