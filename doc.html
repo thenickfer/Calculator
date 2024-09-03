@@ -5,76 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="stylesC.css">
-    <script src="script.js"></script>
+    
 </head>
 <body>
     
     <div class="calc">
         
-        <div class="popup" id="popup">
-            <div class="menu" onclick="popup()">
-                <div class="linha"> </div>
-                <div class="linha"> </div>
-                <div class="linha"> </div>
-             </div>
-            <div class="seleciona-calc" id="seleciona-calc" onclick="muda()">Calculadora Científica</div>
-            
-        </div>
-        <div class="menu" onclick="popup()">
-           <div class="linha"> </div>
-           <div class="linha"> </div>
-           <div class="linha"> </div>
-        </div>
+
         
         
-        <div class="tela" id="tela">
-            0
+
+        <input disabled type="text" id="numeros" value="0">
+
+        <div class="memoria">
+            Last Result:
+            <div id="memo">0</div> 
         </div>
-        <div class="numeros" id="numeros" >
-            0
-        </div>
+
+        
         <div class="botoes">
             <div class="fileira" >
-                <button class="botao dark" onclick="porCem()">%</button>
-                <button class="botao dark" onclick="CE()">CE</button>
-                <button class="botao dark" onclick="limpaTela()" id="c">C</button>
-                <button class="botao dark" onclick="deleta1()" style="font-size: 1.5em;">⌫</button>
-            </div>
-            <div class="fileira">
-                <button class="botao dark" onclick="divideX()"><sup>1</sup>/x</button>
-                <button class="botao dark" onclick="aoQuad()">x<sup>2</sup></button>
-                <button class="botao dark" onclick="raiz()"><sup>2</sup>√x</button>
-                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(4)" id="div">÷</button>
-            </div>
-            <div class="fileira">
-                <button class="botao light" onclick="escreveNum(7)" >7</button>
-                <button class="botao light" onclick="escreveNum(8)">8</button>
-                <button class="botao light" onclick="escreveNum(9)">9</button>
-                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(3)" id="multi">×</button>
-            </div>
-            <div class="fileira">
-                <button class="botao light" onclick="escreveNum(4)">4</button>
-                <button class="botao light" onclick="escreveNum(5)">5</button>
-                <button class="botao light" onclick="escreveNum(6)">6</button>
-                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(2)" id="sub">-</button>
+                <button class="botao" onclick="escreveNum('π')" style="font-size: 1.2em;">π</button>
+                <button class="botao" onclick="escreveNum('e')" style="font-size: 1.3em;">e</button>
+                <button class="botao" onclick="CE()" id="c">C</button>
+                <button class="botao" onclick="deleta1()" style="font-size: 1.5em;">⌫</button>
             </div>
             <div class="fileira" >
-                <button class="botao light" onclick="escreveNum(1)">1</button>
-                <button class="botao light" onclick="escreveNum(2)">2</button>
-                <button class="botao light" onclick="escreveNum(3)">3</button>
-                <button class="botao dark" style="font-size: 2em;" onclick="preparaOp(1)" id="soma">+</button>
+                <button class="botao" onclick="divideX()"><sup>1</sup>/x</button>
+                <button class="botao" onclick="modulo()">|x|</button>
+                <button class="botao" onclick="notacao()" id="c">exp</button>
+                <button class="botao" onclick="escreveOp('%')" style="font-size: 1.2em;">mod</button>
+            </div>
+            <div class="fileira">
+                <button class="botao" onclick="abrePar()">(</button>
+                <button class="botao" onclick="fechaPar()">)</button>
+                <button class="botao" onclick="fatorial()">n!</button>
+                <button class="botao" style="font-size: 2em;" onclick="escreveOp('÷')" id="div">÷</button>
+            </div>
+            <div class="fileira">
+                <button class="botao" onclick="escreveNum(7)" >7</button>
+                <button class="botao" onclick="escreveNum(8)">8</button>
+                <button class="botao" onclick="escreveNum(9)">9</button>
+                <button class="botao" style="font-size: 2em;" onclick="escreveOp('×')" id="multi">×</button>
+            </div>
+            <div class="fileira">
+                <button class="botao" onclick="escreveNum(4)">4</button>
+                <button class="botao" onclick="escreveNum(5)">5</button>
+                <button class="botao" onclick="escreveNum(6)">6</button>
+                <button class="botao" style="font-size: 2em;" onclick="escreveOp('-')" id="sub">-</button>
             </div>
             <div class="fileira" >
-                <button class="botao light" onclick="inverteSinal()">+/-</button>
-                <button class="botao light" onclick="escreveNum(0)">0</button>
-                <button class="botao light" onclick="ponto()">.</button>
-                <button class="botao purple" onclick="igual()">=</button>
+                <button class="botao" onclick="escreveNum(1)">1</button>
+                <button class="botao" onclick="escreveNum(2)">2</button>
+                <button class="botao" onclick="escreveNum(3)">3</button>
+                <button class="botao" style="font-size: 2em;" onclick="escreveOp('+')" id="soma">+</button>
+            </div>
+            <div class="fileira" >
+                <button class="botao" onclick="inverteSinal()">+/-</button>
+                <button class="botao" onclick="escreveNum(0)">0</button>
+                <button class="botao" onclick="ponto()">.</button>
+                <button class="azul botao" onclick="igual()">=</button>
         </div>
     </div>
 
     <div class="cover">
         
     </div>
-
+    <script src="script2.js"></script>
 </body>
 </html>

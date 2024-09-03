@@ -1,14 +1,90 @@
 body {
-    background-color: #232A45;
+    background-color: #12141b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: narrower;
+    color: #12141b;
+    text-align: center;
 }
 
 .calc {
     
     background-color: #ffffff;
-    width: 700px;
+    width: fit-content;
+    min-width: 700px;
+    min-height: 620px;
     height: fit-content;
     border-radius: 10px;
     margin: auto auto 5rem ;
     padding: 30px 2px;
     
 }
+
+#numeros {
+    min-width: 500px;
+    width: fit-content;
+    height: 60px;
+    text-align: right;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+}
+
+.botoes {
+    height: 520px;
+    margin-top: 7.5%;
+    margin-bottom: -30px;
+    
+}
+
+.fileira {
+    display: flex;
+    width: 99%;
+    height: 16%;
+    justify-content: center;
+    align-items: center;
+    margin: -10px auto;
+    flex-direction: row;
+}
+
+.botao.azul {
+    background-color: #56b3f0;
+    box-shadow: inset 8px 10px 15px #93c9f7, inset -8px -10px 15px #4d7daa ;
+    font-size: 2em;
+}
+
+.botao.azul:hover {
+    background-color: #93c9f7;
+
+}
+
+.botao.azul:active {
+    background-color: #4a9fd8;
+    box-shadow: inset 8px 10px 15px #4d7daa, inset -8px -10px 15px #93c9f7 ;
+}
+
+.botao {
+    flex-grow: 1;
+    width: 20%;
+    height: 85%;
+    margin: -2px 1px;
+    border-radius: 2%;
+    font-size: 1.1em;
+    border: none;
+    text-align: center; 
+    transition: background-color 0.25s;
+    background-color: #f1f1f1;
+    box-shadow: inset 8px 10px 15px #ffffff, inset -8px -10px 15px #a8a8a8 ;
+    border: 1px solid rgb(121, 121, 121);
+    
+}
+
+.botao:hover{
+    background-color: #d7d7d7;
+    cursor: pointer;
+}
+
+.botao:active {
+    background-color: #ebeff5;
+    box-shadow: inset 8px 10px 15px #a8a8a8, inset -8px -10px 15px #ffffff;
+}
+
