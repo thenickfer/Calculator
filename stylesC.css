@@ -32,7 +32,7 @@ body {
 .botoes {
     height: 520px;
     margin-top: 7.5%;
-    margin-bottom: -30px;
+    margin-bottom: 45px;
     
 }
 
@@ -60,6 +60,25 @@ body {
 .botao.azul:active {
     background-color: #4a9fd8;
     box-shadow: inset 8px 10px 15px #4d7daa, inset -8px -10px 15px #93c9f7 ;
+}
+
+.exit {
+    background-color: #dd2c2c;
+    color: #f1f1f1;
+    width: 60px;
+    height: 30px;
+    padding-top: 10px;
+    margin-left: 637px;
+    margin-top: -27px;
+    border-radius: 5%;
+    border: 2px solid #ffffff;
+    
+}
+
+.exit:hover {
+    cursor: pointer;
+    border: 2px solid #4a9fd8;
+    
 }
 
 .botao {

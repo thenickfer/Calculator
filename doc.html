@@ -11,56 +11,69 @@
     
     <div class="calc">
         
-
+        <div class="exit" onclick="troca()">X</div>
         
         
 
         <input disabled type="text" id="numeros" value="0">
 
         <div class="memoria">
-            Last Result:
+            Memory:
             <div id="memo">0</div> 
         </div>
 
         
         <div class="botoes">
             <div class="fileira" >
+                <button class="botao" onclick="memo(0)" style="font-size: 1.2em;">MC</button>
+                <button class="botao" onclick="memo('add')" style="font-size: 1.2em;">M+</button>
+                <button class="botao" onclick="memo('sub')" style="font-size: 1.2em;">M-</button>
+                <button class="botao" onclick="memo('mr')" style="font-size: 1.2em;">MR</button>
+            </div>
+            <div class="fileira" >
+                <button class="botao" onclick="nxtOps()" id="2nd" style="font-size: 1.2em;">2<sup>nd</sup></button>
                 <button class="botao" onclick="escreveNum('π')" style="font-size: 1.2em;">π</button>
                 <button class="botao" onclick="escreveNum('e')" style="font-size: 1.3em;">e</button>
                 <button class="botao" onclick="CE()" id="c">C</button>
                 <button class="botao" onclick="deleta1()" style="font-size: 1.5em;">⌫</button>
             </div>
             <div class="fileira" >
+                <button class="botao" onclick="opsTela('^')" id="elevax" style="font-size: 1.2em;">x<sup>2</sup></button>
                 <button class="botao" onclick="divideX()"><sup>1</sup>/x</button>
                 <button class="botao" onclick="modulo()">|x|</button>
                 <button class="botao" onclick="notacao()" id="c">exp</button>
                 <button class="botao" onclick="escreveOp('%')" style="font-size: 1.2em;">mod</button>
             </div>
             <div class="fileira">
+                <button class="botao" onclick="opsTela('sqrt')" id="sqrt" style="font-size: 1.2em;"><sup>2</sup>√x</button>
                 <button class="botao" onclick="abrePar()">(</button>
                 <button class="botao" onclick="fechaPar()">)</button>
                 <button class="botao" onclick="fatorial()">n!</button>
                 <button class="botao" style="font-size: 2em;" onclick="escreveOp('÷')" id="div">÷</button>
             </div>
             <div class="fileira">
+                <button class="botao" onclick="escreveOp('^')" id="elevay" style="font-size: 1.2em;">x<sup>y</sup></button>  
                 <button class="botao" onclick="escreveNum(7)" >7</button>
                 <button class="botao" onclick="escreveNum(8)">8</button>
                 <button class="botao" onclick="escreveNum(9)">9</button>
                 <button class="botao" style="font-size: 2em;" onclick="escreveOp('×')" id="multi">×</button>
             </div>
             <div class="fileira">
+                <button class="botao" onclick="opsTela('10x')" id="10x" style="font-size: 1.2em;">10<sup>x</sup></button>
                 <button class="botao" onclick="escreveNum(4)">4</button>
                 <button class="botao" onclick="escreveNum(5)">5</button>
                 <button class="botao" onclick="escreveNum(6)">6</button>
                 <button class="botao" style="font-size: 2em;" onclick="escreveOp('-')" id="sub">-</button>
             </div>
             <div class="fileira" >
+                <button class="botao" onclick="opsTela('log')" id="log" style="font-size: 1.2em;">log</button>
                 <button class="botao" onclick="escreveNum(1)">1</button>
                 <button class="botao" onclick="escreveNum(2)">2</button>
                 <button class="botao" onclick="escreveNum(3)">3</button>
                 <button class="botao" style="font-size: 2em;" onclick="escreveOp('+')" id="soma">+</button>
             </div>
             <div class="fileira" >
+                <button class="botao" onclick="opsTela('ln')" id="ln" style="font-size: 1.2em;">ln</button>
                 <button class="botao" onclick="inverteSinal()">+/-</button>
                 <button class="botao" onclick="escreveNum(0)">0</button>
                 <button class="botao" onclick="ponto()">.</button>
