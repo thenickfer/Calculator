@@ -34,8 +34,11 @@ function fechaPar(){
 
 function escreveOp(op){
     let ini = tela.value;
+    if(op=='^'&&second){
+        op='^(1÷';
+    }
 
-    if(ini.endsWith('×')||ini.endsWith('÷')||ini.endsWith('+')||ini.endsWith('-')||ini.endsWith('%')||ini=='0'||mostraResult){
+    if(ini.endsWith('×')||ini.endsWith('÷')||ini.endsWith('+')||ini.endsWith('-')||ini.endsWith('%')||ini.endsWith('^')||ini=='0'||mostraResult){
         op="";
     }
 
@@ -77,11 +80,101 @@ function nxtOps(){
         document.getElementById('ln').innerHTML = 'e<sup>x';
     }
 }
+
+function fatorial(){
+    igual();
+    let aux = parseFloat(tela.value);
+    tela.value = f1(aux);
+
+}
+
+function f1(num){
+    if(num<=1){
+        return 1;
+    }
+    return num*f1(num-1);
+}
+
 function deleta1(){
     let temp = tela.value;
     let aux = temp.substring(0, temp.length-1);
 
     tela.value=aux;
+}
+
+function opsTela(opp){
+    igual();
+    let aux = parseFloat(tela.value);
+    switch(opp){
+        case '^':
+            quadradoCubo(aux);break;
+        case 'sqrt':
+            raizQuadCub(aux);break;
+        case '10x':
+            baseElev(aux);break;
+        case 'log':
+            calcLog(aux);break;
+        case 'ln':
+            ene(aux);break;
+    }
+}
+
+function ene(aux){
+    if(second){
+        tela.value = Math.E**aux;
+    }else {
+        tela.value = Math.log(aux)/Math.log(Math.E);
+    }
+}
+
+function inverteSinal(){
+    tela.value*=(-1);
+}
+
+let logaritmando;
+let base;
+let midcalclog = false;
+function calcLog(aux){
+    if(second){
+        if(!midcalclog){
+            logaritmando = Number(tela.value);
+            tela.value = 0;
+            midcalclog = true;
+        } else {
+            base = Number(tela.value);
+            var log = Math.log(logaritmando)/Math.log(base);
+            tela.value = log;
+            midcalclog = false;
+        }
+
+    }else{
+        tela.value = Math.log(aux);
+    }
+}
+
+function baseElev(aux){
+    if(second){
+        tela.value = 2**aux;
+    }else{
+        tela.value = 10**aux;
+    }
+}
+
+function quadradoCubo(aux){
+    if(second){
+        tela.value = aux**3;
+    } else {
+        tela.value = aux**2;
+    }
+
+}
+
+function raizQuadCub(aux){
+    if(second){
+        tela.value = Math.cbrt(aux);
+    } else {
+        tela.value = Math.sqrt(aux);
+    }
 }
 
 function modulo(){
@@ -92,15 +185,7 @@ function modulo(){
     }
 }
 
-function opsTela(sla){
-    igual();
-    let aux;
-    switch(sla){
-        case '&':
-            tela.value = parseFloat(tela.value)**3;
-            
-    }
-}
+
 
 function ponto() {
     let temp = tela.value;
@@ -126,7 +211,6 @@ function notacao(){
     let aux = tela.value;
     let sla = aux.substring(0, indexP(aux));
     let len = sla.length;
-    console.log(sla);
     if(temPonto){
         sla = aux/(10**(len-1));
         tela.value = `${sla}e+${len-1}`
@@ -162,16 +246,17 @@ function igual() {
     let comp = sum.length;
     for(let i=0;i<comp;i++){
         num = sum.charAt(i);
-        console.log(sum.charAt(i));
         switch(num){
             case '÷': 
                 num = "/";break;
             case '×': 
                 num = "*";break;
             case 'π':
-                num=Math.PI;
+                num=Math.PI;break;
             case 'e':
-                num=Math.E;
+                num=Math.E;break;
+            case '^':
+                num="**";break;
         }
 
         st+=num;
