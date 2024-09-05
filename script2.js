@@ -129,10 +129,10 @@ function notacao(){
     console.log(sla);
     if(temPonto){
         sla = aux/(10**(len-1));
-        tela.value = `${sla}.e+${len-1}`
+        tela.value = `${sla}e+${len-1}`
     } else {
         sla = aux/(10**(len));
-        tela.value = `${sla}.e+${len}`
+        tela.value = `${sla}e+${len}`
     }
     
 }

@@ -72,6 +72,7 @@ body {
     margin-top: -27px;
     border-radius: 5%;
     border: 2px solid #ffffff;
+    transition: background-color 0.25s;
     
 }
 
@@ -79,6 +80,10 @@ body {
     cursor: pointer;
     border: 2px solid #4a9fd8;
     
+}
+
+.exit:active {
+    background-color: #a52222;
 }
 
 .botao {
@@ -90,7 +95,7 @@ body {
     font-size: 1.1em;
     border: none;
     text-align: center; 
-    transition: background-color 0.25s;
+    transition: background-color box-shadow 0.25s;
     background-color: #f1f1f1;
     box-shadow: inset 8px 10px 15px #ffffff, inset -8px -10px 15px #a8a8a8 ;
     border: 1px solid rgb(121, 121, 121);

@@ -1,8 +1,8 @@
 let index = 0;
 let escolha; //por enquanto 1soma;2subtrai;3multiplica;4divide
-let list = new Array(4);
+let list = new Array(4); //array para armazenar objetos Num();
 
-
+//construtor do objeto que armazena o numero antecedente e a operacao desejada
 
 class Num{
     constructor(numero, operacao){
@@ -24,6 +24,8 @@ class Num{
 }
 
 list[0] = new Num(0, 0);
+
+//cria objeto usando antecedente e operacao escolhida, depois escreve os 2 na tela
 
 function preparaOp(escolha){
     mostraResult = false;
@@ -55,10 +57,13 @@ function preparaOp(escolha){
 
 
 }
-
+//mostraResult: booleana para saber se a tela esta mostrando ou nao um resultado
 let mostraResult = false;
 let ultimoNumero;
 let ultimaOp;
+
+//pega o valor de cada elemento do array e realiza sua operacao com o numero do proximo elemento
+
 function igual(){
     document.getElementById("numeros").innerHTML = 0;
     let total = 0;
@@ -110,7 +115,7 @@ function igual(){
         mostraResult=true;
         list = new Array(4);
         index=0;
-    }else if(mostraResult){
+    }else if(mostraResult){//se ja tiver mostrando resultado, so realiza a ultima operacao do calculo anterior
         let semNome = parseFloat(document.getElementById("tela").innerHTML);
         let x = parseFloat(ultimoNumero);
         let op = parseFloat(ultimaOp);
@@ -134,18 +139,20 @@ function igual(){
     
 }
 
+//abrir menu popup
 
 function popup(){
     var pop = document.getElementById("popup");
     pop.classList.toggle("show");
 }
 
-
+//mudar de calculadora
 
 function muda(){
     window.location.href = "doc.html";
 }
 
+//escreve na tela o numero escolhido pelo usuario
 
 function escreveNum(num){
     var ini = document.getElementById("tela").innerHTML;
@@ -163,7 +170,7 @@ function escreveNum(num){
 
 
 
-
+//zera tada a operacao
 
 function CE(){
     document.getElementById("tela").innerHTML = 0;
@@ -178,25 +185,35 @@ function CE(){
 
 
 
+//zera a tela
 
 function limpaTela(){
     document.getElementById("tela").innerHTML = 0;
 }
+
+//gambiarra pra apagar o digito mais a direita
+
 function deleta1() {
     var ini = document.getElementById("tela").innerHTML;
     var rm = ini%10;
     var newVal = (ini-rm)/10;
     document.getElementById("tela").innerHTML = newVal;
 }
+
+//retorna o valor ao quadrado do que esta na tela
 function aoQuad() {
     var ini = document.getElementById("tela").innerHTML;
     var newVal = ini*ini;
     document.getElementById("tela").innerHTML = newVal;
 }
+
+//multiplica o que esta na tela por -1
 function inverteSinal(){
     var ini = document.getElementById("tela").innerHTML;
     document.getElementById("tela").innerHTML = ini*(-1);
 }
+
+//adiciona um ponto e previne o usuario de botar mais de um ponto
 function ponto() {
     var temp = document.getElementById("tela").innerHTML;
     var cont=0;
@@ -215,17 +232,19 @@ function ponto() {
 
 
 
-
+//escreve na tela o valor de 1 dividido pelo valor atual da tela
 function divideX(){
     var temp = document.getElementById("tela").innerHTML;
     document.getElementById("tela").innerHTML = 1/temp;
 }
 
+//divide o valor na tela por cem
 function porCem(){
     var temp = document.getElementById("tela").innerHTML;
     document.getElementById("tela").innerHTML = temp/100;
 }
 
+//escreve na tela a raiz do numero atual
 function raiz(){
     var temp = document.getElementById("tela").innerHTML;
     document.getElementById("tela").innerHTML = Math.sqrt(temp);
