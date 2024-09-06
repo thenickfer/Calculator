@@ -128,6 +128,7 @@ function ene(aux){
 }
 
 function inverteSinal(){
+    igual();
     tela.value*=(-1);
 }
 
