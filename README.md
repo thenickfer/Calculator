@@ -1,1 +1,1 @@
-This is my first time working with JavaScript, Html and CSS, the focus of this sprint was not writing a clean or optimized code, but rather learning the basic syntax of the languages. I'll be further studying the languages and trying to improve my skillset.
+This is my first time working with JavaScript, Html and CSS, the focus of this sprint was not writing a clean or optimized code, but rather learning about of the languages. 
